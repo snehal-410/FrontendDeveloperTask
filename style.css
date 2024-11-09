@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for interactive boxes */
+.interactive-box 
+{
+    width: 90%;
+    max-width: 500px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 3px solid #0078D4;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 25px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Expanded box */
+.interactive-box.expanded 
+{
+    height: 220px;
+    background-color: #f0f8ff;
+}
+
+/* Price and discount info styling */
+.discount-option 
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount-option label 
+{
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Highlight the discount percentage */
+.discount-option label::before 
+{
+    content: attr(data-discount);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FF6347;  /* Tomato color for emphasis */
+   /*  background-color: #ffebcd; Light coral background */
+    padding: 1px 8px;
+    margin-right: 8px;
+    border-radius: 5px;
+}
+
+/* Price info styling */
+.price-info 
+{
+    position: absolute;
+    margin-left: 10px;
+    top: 50px;
+    left: 30px;
+    text-align: left;
+    padding: 2px 9px;
+    margin-left: 10px;
+    border-radius: 5px;
+    
+}
+
+.price
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #080c0e;
+    top: 20px;
+    left: 10px;
+    text-align: left;
+    padding: 2px 9px;
+    margin-left: 10px;
+    
+}
+
+.line-price{
+    text-decoration: line-through;
+    padding: 1px 5px;
+}
+
+.size-color
+{
+position: absolute;
+Font-size: 1.0em;
+/* font-weight: bold; */
+color: #080c0e;
+top: 90px;
+left: 50px;
+text-align: left;
+padding: 1px 5px;
+margin-left: 10px;
+border-radius: 5px;
+}
+
+.drop_options
+{
+position: absolute;
+Font-size: 1.1em;
+/* font-weight: bold; */
+color: #080c0e;
+top: 110px;
+left: 50px;
+text-align: left;
+padding: 1px 5px;
+margin-left: 10px;
+border-radius: 5px;
+}
+
+.size-color .Size 
+{
+    margin-left: 30px; /* Adjust as needed */
+    padding: 1px 5px;
+}
+
+.size-color .Color {
+    margin-left: 30px; /* Adjust as needed */
+    padding: 1px 5px;
+}
+
+.most_popular{
+    position: absolute;
+    font-size: 1.2em;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #15f05b;
+    top: 10px;
+    right: 30px;
+    text-align: right;
+    padding: 2px 9px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+.code{
+    padding: 2px 5px;
+}
+.info{
+    position: absolute;
+    margin-right: 10px;
+    top: 40px;
+    right: 30px;
+    text-align: right;
+    padding: 2px 9px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.off_option
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #080c0e;
+    top: 40px;
+    right: 90px;
+    text-align: right;
+    padding: 2px 9px;
+    margin-right: 10px;
+}
+
+.standard-price
+{
+    font-size: 1em;
+    color: #555;
+    text-decoration: line-through;
+    display: block;
+}
+
+.standard-price-label 
+{
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Hover effect */
+.interactive-box:hover 
+{
+    background-color: #e1f3ff;
+    transform: scale(1.05);
+}
+
+.size-color{
+    display: none;
+}
+.drop_options {
+    display: none;
+}
+
+.interactive-box.expanded .drop_options {
+    display: block; /* Show dropdowns when expanded */
+}
+.interactive-box.expanded .size-color {
+    display: block; /* Show dropdowns when expanded */
+}
+
+
+/* Optional: Add styling for the expanded box */
+.interactive-box.expanded {
+    border: 2px solid #000; /* Adds a border when expanded */
+    padding: 10px;
+    /* Add any other styling here */
+}
+
+/* Basic styles for the interactive box */
+/* .interactive-box {
+    width: 90%;
+    max-width: 500px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 3px solid #0078D4;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 25px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+} */
+
+/* Expanded box styling */
+.interactive-box.expanded,
+.interactive-box:focus-within {
+    height: 220px;
+    background-color: #f0f8ff;
+}
+
+/* Size and dropdown options hidden by default */
+.size-color, .drop_options {
+    display: none;
+}
+
+/* Show size and dropdown options when expanded or focused within */
+.interactive-box.expanded .size-color,
+.interactive-box.expanded .drop_options,
+.interactive-box:focus-within .size-color,
+.interactive-box:focus-within .drop_options {
+    display: block;
+}
+
+/* Optional styling for expanded box */
+.interactive-box.expanded,
+.interactive-box:focus-within {
+    border: 2px solid #000;
+    padding: 10px;
+}
+
+/* Hover effect for the interactive box */
+.interactive-box:hover {
+    background-color: #e1f3ff;
+    transform: scale(1.05);
+}
+
+/* Card container */
+.card-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width:50%;
+}
+
+/* Card header */
+.card-header h2 {
+    text-align: center;
+    color: #0078D4;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Card footer for shipping and total */
+.card-footer {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 20px;
+    padding: 60px 0;
+    font-size: 16px;
+    color: #333;
+    border-top: 1px solid #ddd;
+  
+}
+
+/* Add to Cart button */
+.add-to-cart-btn {
+    display: block;
+    width: 50%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0078D4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #005fa3;
+}
+
+
+
+

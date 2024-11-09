@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Boxes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-header">
+            <h2>Bundle and Save</h2>
+        </div>
+    <div id="top-box" class="interactive-box">
+        <div class="discount-option">
+            <input type="radio" id="unit1" name="unit" value="1">
+            <label for="unit1">1 unit</label>          
+        </div>
+        <div class="info">
+            <label class="off_option">10% off</label>
+        </div>
+        <div class="price-info">
+            <span class="price">DKK 195.00</span>
+            <!-- <span class="standard-price">$24.00 USD</span> -->
+        </div>
+        <div class="size-color">
+            <span class="Size">Size</span>
+            
+            <span class="Color">Color</span>
+            <!-- <span class="standard-price">$24.00 USD</span> -->
+        </div>
+        <div class="drop_options">
+            <span class="code">#1</span>
+                <select id="size-select" name="size">
+                    <option value="" disabled selected>S</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                
+                <select id="color-select" name="color">
+                    <option value="" disabled selected>Color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            <br/>
+                <span class="code">#2</span>
+                        <select id="size-select" name="size">
+                            <option value="" disabled selected>S</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                        
+                        <select id="color-select" name="color">
+                            <option value="" disabled selected>Color</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+        </div>
+        
+
+    </div>
+    
+    <div id="middle-box" class="interactive-box">
+        <div class="discount-option">
+            <input type="radio" id="unit2" name="unit" value="1">
+            <label for="unit2">2 unit </label>     
+        </div>
+        <div class="most_popular">
+            <label class="most_po">Most Popular</label>
+        </div>
+
+        <div class="info">
+            
+            <label class="off_option">40% off</label>
+        </div>
+        <div class="price-info">
+            <span class="price">DKK 345.00</span> 
+         <span class="line-price">D195.00</span>
+        </div>
+        <div class="size-color">
+            <span class="Size">Size</span>
+            
+            <span class="Color">Color</span>
+            <!-- <span class="standard-price">$24.00 USD</span> -->
+        </div>
+        <div class="drop_options">
+            <span class="code">#1</span>
+                <select id="size-select" name="size">
+                    <option value="" disabled selected>S</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                
+                <select id="color-select" name="color">
+                    <option value="" disabled selected>Color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            <br/>
+                <span class="code">#2</span>
+                        <select id="size-select" name="size">
+                            <option value="" disabled selected>S</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                        
+                        <select id="color-select" name="color">
+                            <option value="" disabled selected>Color</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+        </div>
+        
+    </div>
+    
+    <div id="bottom-box" class="interactive-box">
+        <div class="discount-option">
+            <input type="radio" id="unit2" name="unit" value="1">
+            <label for="unit2">3 unit </label>
+        </div> 
+        <div class="info">
+            <label class="off_option">60% off</label>
+        </div>
+        <div class="price-info">
+            <span class="price">DKK 528.00</span>
+        </div>
+        <div class="size-color">
+            <span class="Size">Size</span>
+            
+            <span class="Color">Color</span>
+            <!-- <span class="standard-price">$24.00 USD</span> -->
+        </div>
+        <div class="drop_options">
+            <span class="code">#1</span>
+                <select id="size-select" name="size">
+                    <option value="" disabled selected>S</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                
+                <select id="color-select" name="color">
+                    <option value="" disabled selected>Color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            <br/>
+                <span class="code">#2</span>
+                        <select id="size-select" name="size">
+                            <option value="" disabled selected>S</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                        
+                        <select id="color-select" name="color">
+                            <option value="" disabled selected>Color</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+        </div>
+        
+       
+    </div>
+</div>
+   <!-- Footer with shipping and total info -->
+   <div class="card-footer">
+    <span class="shipping-info">Free 2-day Shipping</span>
+    <span class="total-info">Total: DKK 360.00</span>
+</div>
+
+<!-- Add to Cart button -->
+<button class="add-to-cart-btn">+ADD TO CART</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
